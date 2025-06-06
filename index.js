@@ -16,7 +16,6 @@ const client = new Client({
 
 client.commands = new Collection();
 
-// Carregar comandos
 const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
@@ -31,7 +30,6 @@ for (const file of commandFiles) {
   }
 }
 
-// Configurar DisTube
 client.distube = new DisTube(client, {
   emitNewSongOnly: true,
   plugins: [new YtDlpPlugin()]
@@ -49,7 +47,6 @@ client.distube
     if (channel) channel.send('❌ Erro: ' + error.message);
   });
 
-// Eventos
 client.once('ready', () => {
   console.log(`Bot logado como ${client.user.tag}`);
 });
