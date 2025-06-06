@@ -5,7 +5,7 @@ Um bot de música para Discord feito com [Discord.js](https://discord.js.org) e 
 ## 🚀 Funcionalidades
 
 * Comando `/play` para tocar músicas
-* Integração com YouTube, Spotify e mais
+* Integração com YouTube
 * Suporte a fila de músicas
 * Mensagens de feedback no chat
 * Uso de `@distube/yt-dlp` como plugin para busca
